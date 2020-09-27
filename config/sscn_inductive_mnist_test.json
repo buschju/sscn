@@ -1,0 +1,55 @@
+{
+  "dataset_name": "MNIST_test",
+  "test_dataset_name": "MNIST_train",
+  "dataset_parameters": {
+    "normalize": true
+  },
+  "model_name": "SscnConv",
+  "model_parameters": {
+    "image_size": [28, 28],
+    "in_channels": 1,
+    "kernel_size": [5, 3, 3],
+    "num_channels": [10, 20, 30],
+    "stride": 2,
+    "padding": [2, 1, 1],
+    "lambda_reconst": 1.0,
+    "lambda_reg": 1.0,
+    "lambda_ssc": 1.0,
+    "lambda_assignment": 1.0,
+    "se_bias": false,
+    "num_clusters": 10,
+    "max_cluster_dim": 9
+  },
+  "training_parameters": {
+    "num_epochs": 30,
+    "learning_rate": 1e-3,
+    "batch_size": 1000,
+    "shuffle_batches": true
+  },
+  "training_parameters_autoencoder": {
+    "num_epochs": 100,
+    "learning_rate": 1e-3,
+    "batch_size": 10000,
+    "shuffle_batches": true
+  },
+  "training_parameters_classifier": {
+    "num_epochs": 30,
+    "num_iterations_per_batch": 10,
+    "learning_rate": 1e-1,
+    "batch_size": 1000,
+    "shuffle_batches": true,
+    "use_pseudo_labels": true,
+    "noise_threshold": 0.1,
+    "noise_alpha": 8.0
+  },
+  "evaluation_parameters": {
+    "method": "classifier",
+    "batch_size": 1000
+  },
+  "run_parameters": {
+    "seed": 0,
+    "num_runs": 10,
+    "load_pretrained_autoencoder": true,
+    "inductive": true
+  }
+}

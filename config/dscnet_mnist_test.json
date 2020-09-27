@@ -1,0 +1,41 @@
+{
+  "dataset_name": "MNIST_test",
+  "dataset_parameters": {
+    "normalize": true
+  },
+  "model_name": "DscNetConv",
+  "model_parameters": {
+    "image_size": [28, 28],
+    "in_channels": 1,
+    "kernel_size": [5, 3, 3],
+    "num_channels": [10, 20, 30],
+    "stride": 2,
+    "padding": [2, 1, 1],
+    "batch_size": 10000,
+    "lambda_reconst": 1.0,
+    "lambda_reg": 1.0,
+    "lambda_ssc": 1.0
+  },
+  "training_parameters": {
+    "num_epochs": 30,
+    "learning_rate": 1e-3
+  },
+   "training_parameters_autoencoder": {
+    "num_epochs": 100,
+    "learning_rate": 1e-3,
+    "batch_size": 10000,
+    "shuffle_batches": true
+  },
+  "evaluation_parameters": {
+    "num_clusters": 10,
+    "max_cluster_dim": 9,
+    "noise_threshold": 0.1,
+    "noise_alpha": 8.0
+  },
+  "run_parameters": {
+    "seed": 0,
+    "num_runs": 1,
+    "load_pretrained_autoencoder": true,
+    "inductive": false
+  }
+}
