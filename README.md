@@ -19,7 +19,7 @@ We provide a demonstration of the inner workings of our model on a small toy dat
 - Results will be tracked by *MLflow*. We uploaded the results from our runs which can be explored using the notebook `src/evaluate_results.ipynb`.
 - Auto-encoders can be trained within the pipeline or pre-trained using the script `src/pretrain_autoencoder.py`. We uploaded the auto-encoder used in our runs into the folder `trained_models`.
 
-# Cite
+## Cite
 If you use our model or any of the provided code or material, please cite our paper:
 
 ```
