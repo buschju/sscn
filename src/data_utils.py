@@ -84,7 +84,8 @@ def save_trained_model(model: Module,
                                                 trained_models_root=trained_models_root,
                                                 )
     pretrained_keys = model.state_dict().keys() if key_prefixes is None else [key for key in model.state_dict().keys()
-                                                                              if key.startswith(key_prefixes)]
+                                                                              for key_prefix in key_prefixes if
+                                                                              key.startswith(key_prefix)]
     torch.save({key: model.state_dict()[key] for key in pretrained_keys},
                trained_model_path,
                )

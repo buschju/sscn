@@ -30,21 +30,16 @@ def run_experiment(data_root: str,
     inductive = run_parameters['inductive']
 
     # Load dataset
+    train_dataset = load_vision_dataset(data_root=data_root,
+                                        dataset_name=dataset_name,
+                                        normalize=dataset_parameters['normalize'],
+                                        )
     if inductive:
-        train_dataset = load_vision_dataset(data_root=data_root,
-                                            dataset_name=dataset_name,
-                                            normalize=dataset_parameters['normalize'],
-                                            )
         test_dataset_name = config['test_dataset_name']
         test_dataset = load_vision_dataset(data_root=data_root,
                                            dataset_name=test_dataset_name,
                                            normalize=dataset_parameters['normalize'],
                                            )
-    else:
-        train_dataset = load_vision_dataset(data_root=data_root,
-                                            dataset_name=dataset_name,
-                                            normalize=dataset_parameters['normalize'],
-                                            )
 
     # Fix random seed
     seed = run_parameters['seed']
@@ -59,7 +54,7 @@ def run_experiment(data_root: str,
     model = get_model_class(model_name=model_name)(**model_parameters)
 
     # Move to device
-    torch.cuda.device(device)
+    torch.cuda.set_device(device)
     model = model.to('cuda')
 
     # Run
