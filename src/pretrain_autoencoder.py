@@ -74,7 +74,7 @@ if __name__ == '__main__':
                                                              )
 
     # Move to device
-    torch.cuda.device(args.device)
+    torch.cuda.set_device(args.device)
     model = model.to('cuda')
 
     # Pre-train auto-encoder
