@@ -4,11 +4,11 @@
 PyTorch-implementation of the *Siamese Subspace Clustering (SSCN)* model proposed in the paper:
 
 [Learning Self-Expression Metrics for Scalable and Inductive Subspace Clustering](https://arxiv.org/pdf/2009.12875.pdf)  
-Busch, J., Faerman, E., Schubert, M. and Seidl, T.  
+Julian Busch, Evgeniy Faerman, Matthias Schubert, and Thomas Seidl  
 2020
 
 ## Setup
-Clone this repository, navigate into the root directory and run `python setup.py install`.
+Install the required packages specified in the file `requirements.txt`, e.g., using `pip install -r requirements.txt`. Additionally, *PyTorch* version *1.6.0* is required and can be installed depending on your system and CUDA version following this guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/).
 
 ## Demo
 We provide a demonstration of the inner workings of our model on a small toy dataset. Please check out the notebook `src/demo.ipynb`.
