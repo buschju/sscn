@@ -8,7 +8,7 @@ Julian Busch, Evgeniy Faerman, Matthias Schubert, and Thomas Seidl
 2020
 
 ## Setup
-Install the required packages specified in the file `requirements.txt`, e.g., using `pip install -r requirements.txt`. Additionally, *PyTorch* version *1.6.0* is required and can be installed depending on your system and CUDA version following this guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/).
+Install the required packages specified in the file `requirements.txt`, e.g., using `pip install -r requirements.txt`. Additionally, the packages `torch==1.6.0` and `torchvision==0.7.0` are required and can be installed depending on your system and CUDA version following this guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/).
 
 ## Demo
 We provide a demonstration of the inner workings of our model on a small toy dataset. Please check out the notebook `src/demo.ipynb`.
