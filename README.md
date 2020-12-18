@@ -5,7 +5,7 @@ PyTorch-implementation of the *Siamese Subspace Clustering (SSCN)* model propose
 
 [Learning Self-Expression Metrics for Scalable and Inductive Subspace Clustering](https://arxiv.org/pdf/2009.12875.pdf)  
 Julian Busch, Evgeniy Faerman, Matthias Schubert, and Thomas Seidl  
-2020
+NeurIPS 2020 Workshop: Self-Supervised Learning - Theory and Practice
 
 ## Setup
 Install the required packages specified in the file `requirements.txt`, e.g., using `pip install -r requirements.txt`. Additionally, the packages `torch==1.6.0` and `torchvision==0.7.0` are required and can be installed depending on your system and CUDA version following this guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/).
