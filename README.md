@@ -26,7 +26,7 @@ If you use our model or any of the provided code or material, please cite our pa
 @article{busch2020learning,
   title={Learning Self-Expression Metrics for Scalable and Inductive Subspace Clustering},
   author={Busch, Julian and Faerman, Evgeniy and Schubert, Matthias and Seidl, Thomas},
-  journal={arXiv preprint arXiv:2009.12875},
+  journal={NeurIPS 2020 Workshop: Self-Supervised Learning - Theory and Practice},
   year={2020}
 }
 ```
